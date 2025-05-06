@@ -8,6 +8,9 @@ import pytz
 import pandas as pd
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from sklearn.feature_extraction.text import TfidfVectorizer
+import nltk
+nltk.download('stopwords')
+
 from nltk.corpus import stopwords
 
 # Inisialisasi Stemmer dan TF-IDF Vectorizer
