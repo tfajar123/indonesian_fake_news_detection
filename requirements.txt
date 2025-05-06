@@ -1,5 +1,8 @@
 streamlit
-scikit-learn
+pickle5
 pandas
-numpy
+scikit-learn
+nltk
 Sastrawi
+requests
+pytz
