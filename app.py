@@ -108,9 +108,10 @@ def fake_news(news):
     return prediction, probability
 
 # Fungsi untuk mengambil data berita dari API
+api_token = st.secrets["API_TOKEN"]
 def get_news(query):
     query = clean_text(query)
-    api_url = f"https://serpapi.com/search.json?engine=google_news&q={query}&gl=id&hl=id&api_key=c2bfb9067853a0cc6eb067e5b82276f9eaf2969b93841db3d25d9088d04fa517"
+    api_url = f"https://serpapi.com/search.json?engine=google_news&q={query}&gl=id&hl=id&api_key={api_token}"
     response = requests.get(api_url)
     if response.status_code == 200:
         return response.json().get('news_results', [])
